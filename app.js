@@ -28,6 +28,18 @@ app.use(app.router);
 app.get('/',function(req,res){
     res.render("backbone/hello");
 });
+app.get('/backbone/base',function(req,res){
+    res.render("backbone/base");
+});
+app.get('/backbone/registUser',function(req,res){
+    res.render("backbone/registUser");
+});
+app.post('/backbone/user',function(req,res){
+   res.json(200,{data:200});
+});
+app.put('/backbone/user',function(req,res){
+   res.json(200,{data:200});
+});
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
