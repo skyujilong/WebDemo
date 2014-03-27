@@ -188,6 +188,7 @@
     // Handle space separated event names.
     if (eventSplitter.test(name)) {
       var names = name.split(eventSplitter);
+      //发生回调了
       for (var i = 0, l = names.length; i < l; i++) {
         obj[action].apply(obj, [names[i]].concat(rest));
       }

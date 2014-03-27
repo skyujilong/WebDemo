@@ -59,7 +59,9 @@ function init(){
                 name : this.$el.find('input[name="name"]').val(),
                 age : this.$el.find('input[name="age"]').val(),
                 sex : this.$el.find('input[name="sex"]:checked').val()
-            });
+            },{validate:true});
+            //表单验证
+            console.log(this.model.validationError);
             //this.module.save();
             userList.add(this.model);
             $('#user').modal('hide');
@@ -83,6 +85,7 @@ function init(){
         },
         updateItem : function(){
             console.log(this.model.toJSON());
+            //这里应该可以写成单例的
             var userView = new UserView({model:this.model});
             $('#user').html(userView.render().$el);
             $('#user').modal('show');
@@ -127,7 +130,7 @@ function init(){
     });
 
 
-    new AppView({
+    var app = new AppView({
         collection:userList
     });
 
