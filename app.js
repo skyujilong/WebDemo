@@ -42,6 +42,15 @@ app.put('/backbone/user',function(req,res){
 });
 
 
+//angular js
+app.get('/angular/base',function(req,res){
+    res.render("angular/base");
+});
+
+app.get('/angular/controller',function(req,res){
+    res.render("angular/angularTemplates");
+});
+
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

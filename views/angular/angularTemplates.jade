@@ -1,0 +1,25 @@
+//
+   Created with JetBrains WebStorm.
+   User: yujilong
+   Date: 14-4-23
+   Time: 下午5:31
+   To change this template use File | Settings | File Templates.
+doctype
+html(lang="en",ng-app="phonecatApp")
+    head
+        meta(charset="utf-8")
+        title angular base demo
+        script(src="/plugin/angular.js",type="text/javascript")
+        script(src="/javascript/angular/angularControllers.js",type="text/javascript")
+    body(ng-controller="PhoneListCtrl")
+        |search:
+        input(ng-model="query")
+        |sort by:
+        select(ng-model="orderProp")
+            option(value="name") name sort
+            option(value="age")  age sort
+        ul
+            li(ng-repeat="phone in phones | filter:query | orderBy:orderProp")
+                |{{phone.name}}
+                p {{phone.snippet}}
+
