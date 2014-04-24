@@ -215,6 +215,18 @@ app.get('/angular/getTestPhonesData',function(req,res){
 });
 
 
+app.get("/angular/testRoute",function(req,res){
+    res.render('angular/angularRouter');
+});
+
+app.get('/angular/getMainListTemplate',function(req,res){
+    res.render('angular/mainListTemplate');
+});
+
+app.get('/angular/getDetailTemplate',function(req,res){
+    res.render('angular/detailTemplate');
+});
+
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });

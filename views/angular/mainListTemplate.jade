@@ -1,0 +1,22 @@
+//
+   Created with JetBrains WebStorm.
+   User: yujilong
+   Date: 14-4-24
+   Time: 下午5:27
+   To change this template use File | Settings | File Templates.
+|<div>
+|   Search:<input ng-model="query"/>
+|   Sort By:
+|   <select ng-model="orderProp">
+|       <option value="name">sort name</option>
+|       <option value="age">sort age</option>
+|   </select>
+|</div>
+|<div>
+|   <ul>
+|       <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+|          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+|          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+|       </li>
+|   </ul>
+|</div>
