@@ -16,5 +16,6 @@ phonecatApp.controller('PhoneListCtrl',function($scope){
         {'name': 'MOTOROLA XOOM™',
             'snippet': 'The Next, Next Generation tablet.',age:6}
     ];
+    //增加一个默认值！ 如果没有默认值，则是一个undefine  也就是一个空的
     $scope.orderProp = 'name';
 });
